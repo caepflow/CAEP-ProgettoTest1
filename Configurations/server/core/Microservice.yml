@@ -1,0 +1,32 @@
+id: 7d6e94fc-dfbf-41f8-8353-ad522abd6f95
+name: Microservice
+type: service
+description: Microservice
+namespace: Ca.CaepFlow.Service
+target:
+  framework: net
+  version: 9
+disableRequiredKeyword: true
+data:
+  orm: EntityFrameworkCore
+  multitenancy: true
+children:
+- id: 950179b5-1346-4db5-b441-1c0385a8c55f
+  type: operation
+- id: e9a0dd79-c391-4673-a4db-1e949b79fc3b
+  type: dto
+- id: fc16a9fc-c8a5-475c-be21-1f793ed44823
+  type: entity
+interactions:
+- type: database
+  targetId: 6f36e888-affb-4e25-b1ae-5d491fca803e
+  level: container
+- type: gateway
+  targetId: 5f9eafbb-81be-47e8-a4c7-ed04a57662ff
+  level: container
+mappings:
+- entity: DataEntity
+  contract: DataTransferObject
+- entity: DataEntity
+  contract: DataTransferObject
+  inverse: true

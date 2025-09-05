@@ -11,22 +11,29 @@ data:
   orm: EntityFrameworkCore
   multitenancy: true
 children:
-- id: 950179b5-1346-4db5-b441-1c0385a8c55f
-  type: operation
-- id: e9a0dd79-c391-4673-a4db-1e949b79fc3b
-  type: dto
-- id: fc16a9fc-c8a5-475c-be21-1f793ed44823
-  type: entity
+  - id: 950179b5-1346-4db5-b441-1c0385a8c55f
+    type: operation
+  - id: e9a0dd79-c391-4673-a4db-1e949b79fc3b
+    type: dto
+  - id: fc16a9fc-c8a5-475c-be21-1f793ed44823
+    type: entity
 interactions:
-- type: database
-  targetId: 6f36e888-affb-4e25-b1ae-5d491fca803e
-  level: container
-- type: gateway
-  targetId: 5f9eafbb-81be-47e8-a4c7-ed04a57662ff
-  level: container
+  - type: database
+    targetId: 6f36e888-affb-4e25-b1ae-5d491fca803e
+    level: container
+  - type: gateway
+    targetId: 5f9eafbb-81be-47e8-a4c7-ed04a57662ff
+    level: container
 mappings:
-- entity: DataEntity
-  contract: DataTransferObject
-- entity: DataEntity
-  contract: DataTransferObject
-  inverse: true
+  - entity: DataEntity
+    contract: DataTransferObject
+  - entity: DataEntity
+    contract: DataTransferObject
+    inverse: true
+annotations:
+  - namespace: c4modeler
+    name: position
+    value:
+      container:
+        x: 264.5
+        y: 80.5
